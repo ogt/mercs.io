@@ -407,6 +407,46 @@ html { font-size: 16px; }
   }
 }
 
+.features-section {
+  padding: 100px 0;
+
+  .feature {
+    &:first-child { padding-left: 0; }
+    &:last-child { padding-right: 0; }
+
+    article {
+      max-width: 370px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .icon {
+      width: 120px;
+      height: 120px;
+    }
+
+    .title {
+      @include font-size(20px);
+      margin: 30px 0 0;
+      color: rgb(18, 26, 53);
+    }
+
+    .summary {
+      @include font-size(28px);
+      font-weight: 200;
+      margin: 20px 0;
+      color: rgb(18, 26, 53);
+    }
+
+    .desc {
+      @include font-size(16px);
+      font-weight: 200;
+      line-height: 140%;
+      color: rgb(18, 26, 53);
+    }
+  }
+}
+
 .site-footer { padding: 125px 0 20px; }
 
 .colophon {
