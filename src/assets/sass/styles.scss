@@ -308,16 +308,7 @@ html { font-size: 16px; }
 }
 
 .testimonials {
-  .heading { padding: 100px 0 25px; }
-
-  .logos {
-    margin: 0 auto;
-    max-width: 980px;
-    height: 110px;
-    line-height: 110px;
-  }
-
-  .quotes { margin-top: 20px; }
+  margin-top: 100px;
 
   .quote {
     &:first-child { padding-left: 0; }
@@ -443,6 +434,39 @@ html { font-size: 16px; }
       font-weight: 200;
       line-height: 140%;
       color: rgb(18, 26, 53);
+    }
+  }
+}
+
+.client-experience {
+  background-color: rgb(9, 188, 212);
+
+  .image {
+    background: image-url('img-laptop-ux.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+  }
+
+  .content {
+    height: 500px;
+    padding-top: 106px;
+
+    p {
+      @include font-size(24px);
+      margin: 0;
+    }
+
+    span {
+      @include font-size(40px);
+      margin-top: 27px;
+    }
+
+    p, span {
+      display: block;
+      color: white;
+      line-height: 1;
+      font-weight: 200;
     }
   }
 }
