@@ -16,13 +16,14 @@ html
 
   body
     header.navbar-fixed-top.site-header.row(role="banner")
-      .col-lg-6
+      .col-sm-6
         .logo
-          img(src="/assets/images/merc-logo-on-dark.svg" alt="")
+          img.logo-dark(src="/assets/images/merc-logo-on-dark.svg" alt="" width="48" height="34")
+          img.logo-white(src="/assets/images/mercs-logo.svg" alt="" width="48" height="34")
         .title
           img(src="/assets/images/mercs-black-text.svg" alt="Mercs")
-      .col-lg-6.text-right
-        p.text-cta.text-right
+      .col-sm-6.text-right
+        p.text-cta.text-right.hidden-xs
           | Want an Excellent Python
           br/
           | Developer for Your Project?
@@ -45,4 +46,5 @@ html
           span.col-xs-3
             | EMail Us
 
-
+    script(src="//code.jquery.com/jquery-2.1.1.min.js")
+    script(src="/assets/javascripts/page.js")

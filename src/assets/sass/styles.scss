@@ -4,8 +4,11 @@
 @import "bootstrap";
 @import "mixins";
 @import "fonts";
+@import "keyframes";
 
 html { font-size: 16px; }
+
+body { margin-top: 80px; }
 
 .btn-default {
   @include button-size(0, 0, 20px, 60px, 3px);
@@ -23,6 +26,67 @@ html { font-size: 16px; }
     border-color: rgb(6, 125, 84);
     background: none;
     box-shadow: none;
+  }
+}
+
+.site-header {
+  height: 80px;
+  line-height: 80px;
+  background: white;
+  @include box-shadow(rgba(black, 0.298039) 0px 2px 3px 0px);
+
+  .logo {
+    height: 80px;
+    width: 80px;
+    background: black;
+    float: left;
+    text-align: center;
+    @include transition(all .4s ease-in);
+
+    .logo-white { display: none; }
+  }
+
+  .title {
+    height: 80px;
+    max-width: 143px;
+    float: left;
+    margin-left: 10px;
+    overflow: hidden;
+    @include transition(all .4s ease-in);
+  }
+
+  .logo, .title {
+    img { vertical-align: middle; }
+  }
+
+  .text-cta {
+    width: auto;
+    @include font-size(14px);
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+    line-height: 140%;
+    display: inline-block;
+    margin: 0 25px 0 0;
+    color: $btn-default-bg;
+    vertical-align: middle;
+  }
+
+  .btn-default {
+    margin-right: 10px;
+  }
+}
+
+.hero {
+  @include background-image(linear-gradient(180deg, rgba(9, 173, 212, .458824) 0%, rgba(7, 153, 103, .6) 100%),
+    image-url('polygon-background.png'),
+    image-url('blurred-background.png'));
+  height: 520px;
+
+  .heading {
+    @include font-size(38px);
+    font-weight: 200;
+    color: white;
+    margin: 84px 0 95px;
   }
 }
 
@@ -65,59 +129,6 @@ html { font-size: 16px; }
       display: block;
       line-height: 1;
     }
-  }
-}
-
-.site-header {
-  height: 80px;
-  line-height: 80px;
-  background: white;
-  @include box-shadow(rgba(black, 0.298039) 0px 2px 3px 0px);
-
-  .logo {
-    height: 80px;
-    width: 80px;
-    background: black;
-    float: left;
-    text-align: center;
-  }
-
-  .title {
-    height: 80px;
-    float: left;
-    margin-left: 10px;
-  }
-
-  .logo, .title {
-    img { vertical-align: middle; }
-  }
-
-  .text-cta {
-    width: auto;
-    @include font-size(14px);
-    font-family: $font-family-sans-serif;
-    font-weight: 300;
-    line-height: 140%;
-    display: inline-block;
-    margin: 0 25px 0 0;
-    color: $btn-default-bg;
-    vertical-align: middle;
-  }
-
-  .btn-default { margin-right: 10px; }
-}
-
-.hero {
-  @include background-image(linear-gradient(180deg, rgba(9, 173, 212, .458824) 0%, rgba(7, 153, 103, .6) 100%),
-    image-url('polygon-background.png'),
-    image-url('blurred-background.png'));
-  height: 520px;
-
-  .heading {
-    @include font-size(38px);
-    font-weight: 200;
-    color: white;
-    margin: 84px 0 95px;
   }
 }
 
@@ -450,7 +461,7 @@ html { font-size: 16px; }
 
   .content {
     height: 500px;
-    padding-top: 106px;
+    padding-top: 150px;
 
     p {
       @include font-size(24px);
@@ -499,9 +510,34 @@ html { font-size: 16px; }
   a, a:hover, a:active, a:visited { color: $gray-base; }
 }
 
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: $screen-xs-max) {
+  .site-header {
+    .btn-default {
+      display: none;
+      opacity: 0;
+    }
+
+    .scrolled & {
+      .logo {
+        background: white;
+
+        .logo-dark { display: none; }
+        .logo-white { display: inline-block; }
+      }
+
+      .title { max-width: 0; }
+
+      .btn-default {
+        display: inline-block;
+        @include animation(fadeIn .4s ease-in .5s 1 forwards);
+      }
+    }
+  }
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: $screen-sm-min) {
-  body { margin-top: 80px; }
 }
 
 /* Medium devices (desktops, 992px and up) */
