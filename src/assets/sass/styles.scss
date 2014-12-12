@@ -209,6 +209,12 @@ body { margin-top: 80px; }
     margin: 6px 0 0;
   }
 
+  .availability {
+    margin-bottom: 0;
+    text-align: center;
+    @include font-size(14px);
+  }
+
   .name, .title {
     color: $gray-base;
     text-align: center;
@@ -756,7 +762,9 @@ body { margin-top: 80px; }
       margin: 9px 0 0;
     }
 
-    .name, .title { text-align: left; }
+    .availability { @include font-size(16px); }
+
+    .name, .title, .availability { text-align: left; }
 
     .education {
       background: rgb(56, 164, 220);
@@ -801,7 +809,7 @@ body { margin-top: 80px; }
   }
 
   .skill-list {
-    margin: 30px 0 0;
+    margin: 10px 0 0;
 
     .skill {
       width: 100px;
