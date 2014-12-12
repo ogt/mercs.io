@@ -14,6 +14,8 @@ html
       - /assets/sass/styles.scss
     | {% endcss_asset_tag %}
 
+    script(src="https://cdn.firebase.com/js/client/2.0.4/firebase.js")
+
   body
     header.navbar-fixed-top.site-header.row(role="banner")
       .col-sm-5.col-lg-6
@@ -27,7 +29,7 @@ html
           | Want an Excellent Python
           br/
           | Developer for Your Project?
-        a.btn.btn-default(href="#") HIRE Vitaliy
+        button.btn.btn-default(href="#contact-modal" data-toggle="modal" data-target="#contact-modal") HIRE Vitaliy
 
     main.page-content
       | {{ content }}
@@ -52,5 +54,39 @@ html
           span In a hurry?
           strong Call us at <a href="tel:+14083735055">1-408-373-5055</a></em>
 
+      #contact-modal.modal.fade
+        .modal-dialog.modal-md
+          .modal-content
+            form(role="form" id="contact-form")
+              .modal-header
+                button.close(type="button" data-dismiss="modal")
+                  span(aria-hidden="true") &times;
+                  span.sr-only Close
+                .text-center
+                  h4.modal-title Looking forward to meeting & working with you.
+                  p I will return your call within a business day. <span>-Vitaliy</span>
+              .modal-body
+                .row
+                  .col-sm-6
+                    input.form-control.email(type="email" placeholder="Email" required)
+                  .col-sm-6
+                    input.form-control.phone(type="text" placeholder="Phone" required)
+                .row
+                  .col-sm-12
+                    input.form-control.company.borderless(type="text" placeholder="Company Name" required)
+                .row
+                  .col-sm-6
+                    input.form-control.name(type="text" placeholder="Your Name" required)
+                  .col-sm-6
+                    input.form-control.linkedin(type="text" placeholder="Your Linkedin Profile")
+                .row
+                  .col-sm-12
+                    textarea.form-control.message.borderless(placeholder="Anything else you'd like me to know?")
+
+              .modal-footer
+                .text-center
+                  button.btn.btn-default(type="submit") Submit
+
     script(src="//code.jquery.com/jquery-2.1.1.min.js")
+    script(src="/assets/javascripts/bootstrap/modal.js")
     script(src="/assets/javascripts/page.js")
