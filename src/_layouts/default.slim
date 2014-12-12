@@ -16,13 +16,13 @@ html
 
   body
     header.navbar-fixed-top.site-header.row(role="banner")
-      .col-sm-6
+      .col-sm-5.col-lg-6
         .logo
           img.logo-dark(src="/assets/images/merc-logo-on-dark.svg" alt="" width="48" height="34")
           img.logo-white(src="/assets/images/mercs-logo.svg" alt="" width="48" height="34")
         .title
           img(src="/assets/images/mercs-black-text.svg" alt="Mercs")
-      .col-sm-6.text-right
+      .col-sm-7.col-lg-6.text-right
         p.text-cta.text-right.hidden-xs
           | Want an Excellent Python
           br/
@@ -34,17 +34,23 @@ html
 
     footer.site-footer
       .container-fluid
-        .row.text-center
-          img.footer-logo(src="/assets/images/mercs-logo.svg" alt="Mercs" width="150" height="106")
+        .row
+          .col-sm-12.col-xs-4.col-xs-offset-4.col-sm-offset-0.text-center
+            img.footer-logo(src="/assets/images/mercs-logo.svg" alt="Mercs" width="150" height="106")
         .colophon.row
-          span.col-xs-3
+          span.col-xs-4
             | &copy; Mercs.io {{ site.time | date: '%Y' }}
-          span.col-xs-3
-            | A Product of <a href="https://www.odesk.com">oDesk.com</a>
-          span.col-xs-3
-            | In a hurry? <em>Call us at 1-800-123-4567</em>
-          span.col-xs-3
+          span.col-xs-4
+            span.hidden-xs
+              | In a hurry? <em>Call us at 1-800-123-4567</em>
+          span.col-xs-4
             | EMail Us
+
+      .call-cta-section.container-fluid.text-center.visible-xs
+        span.icon
+        .cta-text.text-left
+          span In a hurry?
+          strong Call us at <a href="tel:+18001234567">1-800-123-4567</a></em>
 
     script(src="//code.jquery.com/jquery-2.1.1.min.js")
     script(src="/assets/javascripts/page.js")
