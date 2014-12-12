@@ -264,8 +264,8 @@ $btn-default-border:             transparent;
 // $zindex-dropdown:          1000
 // $zindex-popover:           1060
 // $zindex-tooltip:           1070
-// $zindex-navbar-fixed:      1030
-// $zindex-modal:             1040
+$zindex-navbar-fixed:      1060;
+$zindex-modal:             1040;
 
 //== Media queries breakpoints
 //
@@ -563,7 +563,7 @@ $container-large-desktop:      (1170px + $grid-gutter-width);
 //##
 
 //** Padding applied to the modal body
-// $modal-inner-padding:         15px
+$modal-inner-padding:         15px;
 
 //** Padding applied to the modal title
 // $modal-title-padding:         15px
@@ -573,21 +573,21 @@ $container-large-desktop:      (1170px + $grid-gutter-width);
 //** Background color of modal content area
 // $modal-content-bg:                             #fff
 //** Modal content border color
-// $modal-content-border-color:                   rgba(0,0,0,.2)
+$modal-content-border-color:                  transparent;
 //** Modal content border color **for IE8**
 // $modal-content-fallback-border-color:          #999
 
 //** Modal backdrop background color
-// $modal-backdrop-bg:           #000
+$modal-backdrop-bg:           #30A2DE;
 //** Modal backdrop opacity
-// $modal-backdrop-opacity:      .5
+$modal-backdrop-opacity:      .95;
 //** Modal header border color
-// $modal-header-border-color:   #e5e5e5
+$modal-header-border-color:   transparent;
 //** Modal footer border color
-// $modal-footer-border-color:   $modal-header-border-color
+$modal-footer-border-color:   #e2e3e4;
 
 // $modal-lg:                    900px
-// $modal-md:                    600px
+$modal-md:                    550px;
 // $modal-sm:                    300px
 
 //== Alerts
