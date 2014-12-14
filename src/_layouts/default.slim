@@ -6,7 +6,7 @@ html
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
 
     title
-      | {% if page.title %}{{ page.title }} &mdash; {% endif %}{{ site.title }}
+      | {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
 
     meta(name="description" content="{{ site.description }}")
 
