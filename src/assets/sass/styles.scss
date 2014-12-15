@@ -354,6 +354,12 @@ body { margin-top: 80px; }
 .testimonials {
   margin-top: 100px;
 
+  .heading {
+    margin-bottom: 50px;
+
+    h2, h4 {color: $gray-base; }
+  }
+
   .quote {
     article {
       max-width: 370px;
@@ -392,14 +398,15 @@ body { margin-top: 80px; }
     }
 
     .author-icon {
-      display: inline-block;
+      display: block;
       width: 50px;
       height: 50px;
       @include border-radius(50%);
-      margin-right: 50px;
+      position: absolute;
     }
 
     .author-name {
+      margin-left: 100px;
       display: inline-block;
       @include font-size(16px);
       font-weight: 200;
@@ -925,6 +932,7 @@ body { margin-top: 80px; }
 
       blockquote {
         padding: 40px 53px 20px;
+        min-height: 300px;
       }
     }
   }
